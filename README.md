@@ -41,3 +41,11 @@ sudo do-release-upgrade
 ### 우분투 삭제하기  
 https://webnautes.tistory.com/1172  
 가장 간단하게는 시작 메뉴에서 Ubuntu 항목에서 마우스 우 클릭하고 메뉴에서 제거를 선택. 잠시 기다리면 Ubuntu 항목이 삭제된다.    
+  
+  
+  
+## Tool
+- [WSL-DistroManager](https://github.com/rkttu/WSL-DistroManager )
+    - Highly customizable WSL distro manager for Windows 10 and Windows Server 19H1+
+- [wsltools](https://github.com/rkttu/wsltools )
+    - This repository provides batch files that enable you to quickly install and manage WSL in a command-line fashion. These batch files can be run on Windows 10 19H1 or later builds
