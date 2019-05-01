@@ -10,8 +10,9 @@ wget https://raw.githubusercontent.com/JetBrains/clion-wsl/master/ubuntu_setup_e
 ```  
 위 명령어로 설치된 ssh 서버는 사용 포트가 2222번이다.  
   
-ssh 서버 실행  
+### ssh 서버 실행하기 
+
 ```
 sudo service ssh start
-```
-    
+```  
+  
