@@ -55,6 +55,7 @@ https://webnautes.tistory.com/1172
   
   
 ## 글 모음 
+  
 ### 일반
 - [(일어)WSL용 터미널 소프트웨어에 Hyper를 추천](https://qiita.com/WGG_SH/items/65416692d545f888c6a9  )  
 - [(일어)Windows 10의 CMD에서 WSL 상의 Linux 명령어를 호출(버전 1803 대응판)](http://www.atmarkit.co.jp/ait/articles/1805/24/news022.html  )  
@@ -78,8 +79,9 @@ https://webnautes.tistory.com/1172
 - [윈도우10(WINDOWS10)의 스토어에서 우분투 설치 방법](http://psychoria.tistory.com/archive/20171019 )
 - [(일어)Linux 디스트리뷰션 패키징과 사이드 로딩에 의한 설치](https://opcdiary.net/?p=41132 )
 - [(일어)Windows Subsystem for Linux 설치와 사용 방법](http://www.buildinsider.net/enterprise/bashonwindows/01 )
+- [Easily move WSL distributions between Windows 10 machines with import and export!](https://www.hanselman.com/blog/EasilyMoveWSLDistributionsBetweenWindows10MachinesWithImportAndExport.aspx )  
+      
     
-  
 ### 설정
 - [The Windows Subsystem for Linux Guide!](http://wsl-guide.org/en/latest/ )
 - [(일어)WSL에서 apt-get을 사용하여 패키지 설치하기](http://www.atmarkit.co.jp/ait/articles/1608/24/news038.html )
