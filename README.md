@@ -79,8 +79,7 @@ https://webnautes.tistory.com/1172
 - [윈도우10(WINDOWS10)의 스토어에서 우분투 설치 방법](http://psychoria.tistory.com/archive/20171019 )
 - [(일어)Linux 디스트리뷰션 패키징과 사이드 로딩에 의한 설치](https://opcdiary.net/?p=41132 )
 - [(일어)Windows Subsystem for Linux 설치와 사용 방법](http://www.buildinsider.net/enterprise/bashonwindows/01 )
-- [Easily move WSL distributions between Windows 10 machines with import and export!](https://www.hanselman.com/blog/EasilyMoveWSLDistributionsBetweenWindows10MachinesWithImportAndExport.aspx )  
-      
+        
     
 ### 설정
 - [The Windows Subsystem for Linux Guide!](http://wsl-guide.org/en/latest/ )
