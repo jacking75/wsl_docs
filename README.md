@@ -1,5 +1,6 @@
 # WSL 문서
-  
+[Windows 10에 한국어 입출력이 가능한 리눅스 데스크톱 설치하기](https://medium.com/rkttu/windows-10%EC%97%90-%ED%95%9C%EA%B5%AD%EC%96%B4-%EC%9E%85%EC%B6%9C%EB%A0%A5%EC%9D%B4-%EA%B0%80%EB%8A%A5%ED%95%9C-%EB%A6%AC%EB%88%85%EC%8A%A4-%EB%8D%B0%EC%8A%A4%ED%81%AC%ED%86%B1-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0-77208fb019db)  
+    
 ## wsl.exe 옵션
 단축 옵션		긴 옵션	동작  
 -d ＜디스트리뷰션 이름＞		--distribution ＜디스트리뷰션 이름＞	지정한 디스트리뷰션을 시작한다  
