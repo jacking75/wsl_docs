@@ -1,7 +1,32 @@
 # WSL2
+WSL2는 아키텍처 수준에서 WSL1과 다르다.  
+WSL1이 Linux 시스템 콜과 Windows NT 커널 간의 변환층을 필요로 하는 반면, WSL2는 완전한 Linux 커널을 실행하는 경량 VM을 포함한다. 이 VM은 Windows Hipervisor 층에서 직접 실행한다.  
+![wsl2](./images/wsl2-001.png)            
+  
+기존의 VM과의 차이  
+![wsl2](./images/wsl2-002.png)            
+    
+커널은 시스템 호출의 완전 호환성을 갖추고 있기 때문에 Docker나 FUSE 등의 앱으로도 Linux에서 자연스럽게 실행 가능하다. 이 새로운 구현에서는 Linux 커널에서 Windows 파일 시스템에 대한 전체 액세스가 가능하게 되어 있다.  
+  
+또 파일 시스템 액세스가 필요한 상호 작용에서 성능이 크게 개선 되었다. Microsoft의 프로그램 관리자인 Craig Loewan씨에 의하면 응용 프로그램 파일 집합의 수준에 따라 다르지만 3 ~ 6배의 성능 향상이 가능하다고 한다. tar 압축 해제에서는 성능이 20배 향상된 예도 있다.  
+![wsl2](./images/wsl2-003.png)            
+    
+WSL 2의 Linux 파일은 Windows의 파일 시스템(NTFS)가 아닌 EXT4로 포맷된 가상 하드웨어 디스크(VHD)에 저장된다. 그래서 WSL1에서 문제가되었던 디스크 접근 성능이 대폭으로 개선 되었다.
+![wsl2](./images/wsl2-004.png)            
+이 VHD는 필요에 따라서 자동적으로 확장되지만 초기 상태에서 최대에서의 최대 사이즈는 256GB로 제한 되어 있으므로 디스크 영역이 부족하면 에러가 발생한다. 이 경우는 수동으로 VHD 사이즈 제한을 완화해야 한다.  
+  
+Windows 10 2004 버전에서는 WSL2 설치 및 업데이트 프로세스는 매우 쉬운 것이 된다. 기존 Linux 커널은 Windows OS 버전의 일부로 포함 되어 있었지만, 이 다음 릴리스에서는 분리 되기 때문에 타사 드라이버를 설치할 때처럼 Windows Update를 통해 커널을 업데이트 할 수 있다.    
+      
+  
+[microsoft/WSL2-Linux-Kernel](https://github.com/microsoft/WSL2-Linux-Kernel)  
+[MS Doc Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10 )  
+[WSL2(Windows Subsystem For Linux 2) 사용하기](https://medium.com/@seunghunhan_15321/wsl2-windows-subsystem-for-linux-2-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-a0998b84d5fe  )  
+
+  
+
 
 ## Windows 10에 WSL 1 과 WSL 2 설치하기
- 
+    
 ### 1.PowerShell 시작
 "PowerShell"을 관리자 권한으로 실행한다.    
   
@@ -121,6 +146,21 @@ WSL의 디스플레이 설정 공정에서 WSL2 측의 ip 주소를 지정해야
 export DISPLAY=`grep -oP "(?<=nameserver ).+" /etc/resolv.conf`:0.0
 ```
   
+  
+## 네트워크
+WSL1에서는 Windows 10쪽 에뮬레이션을 실시하기 위해, Linux 측에서 TCP/IP 등의 프로토콜은 처리하지 않고, Windows 10의 네트워크 기능을 이용한다. 따라서 Linux의 IP 주소도 Windows 10 쪽과 동일하게 된다.  
+
+이것애 비해 WSL2는 가상 머신에서 Linux 커널이 동작하여 네트워크 스택도 작동하기 때문에 IP 주소는 Win32 측과는 다른 것을 사용한다. 이 때, 가상 네트워크(가상 네트워크 스위치)가 만들어지고, 자신의 내부 네트워크에 WSL2와 Win32 측의 가상 네트워크 어댑터를 연결한 구조가 된다. 현재 이 IP 주소 할당은 WSL2의 가상 네트워크가 기동할 때 발생하므로 반드시 일정한 IP 주소가 되는 것은 아니다.  
+  
+그러나 Windows 10 쪽에서는 항상 WSL2 측은 Localhost로 액세스가 가능한 구조이다. 이것은 WSL2 측에서 수신 포트(Listen 포트)를 Win32 측의 소프트웨어가 중계하는 것으로 이루어진다.  
+  
+또한 WSL2 내에서는 "/etc/resolv.conf"에 기재되어 있는 DNS 서버가 항상 Win32 측의 가상 네트워크 측 IP 주소를 나타내게 되어 있다(이 파일은 WSL2 시작 시 자동 생성된다). 이 구조를 이용하여 Linux 측에서도 일정한 단계에서 Win32 측의 IP 주소를 얻는 것이 가능하다.  
+    
+
+
+## WSL2의 git을 Windows 10에서 사용하기
+1. [여기](https://github.com/andy-5/wslgit/releases)에서 다운로드 후 원하는 위치에 둔다.
+2. 일반적인 git으로 사용하고 싶다면 1에서 받은 실행파일의 이름을 git.exe 로 변경한다.
   
   
 ## 글 모음 
