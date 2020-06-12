@@ -23,9 +23,9 @@ Windows 10 2004 버전에서는 WSL2 설치 및 업데이트 프로세스는 매
 [WSL2(Windows Subsystem For Linux 2) 사용하기](https://medium.com/@seunghunhan_15321/wsl2-windows-subsystem-for-linux-2-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-a0998b84d5fe  )  
 
   
+<br>  
 
-
-## Windows 10에 WSL 1 과 WSL 2 설치하기
+## Windows 10에 WSL1 과 WSL2 설치하기
     
 ### 1.PowerShell 시작
 "PowerShell"을 관리자 권한으로 실행한다.    
@@ -65,7 +65,8 @@ wsl --set-default-version 2
 이제 남은 것은 원하는 Linux 배포판을 설치하는 것 뿐이다.  
 Linux 배포판은 「Microsoft Store」에서 설치한다.  
   
-<br>    
+<br>   
+<br>   
   
 ## WSL 기본 버전 변경
 "WSL"에는 "WSL 1" 과 "WSL 2"가 있으며, 이들은 동시에 설치할 수 있다.  
@@ -84,7 +85,8 @@ wsl --set-default-version 2
 기본값은 WSL 1로 되어 있다.  
 향후 기본 버전 설정은 "WSL 2"로 바뀔 예정이다.  
   
-    
+<br>      
+
 ## Linux 배포판이 사용하는 WSL 버전 변경
 Linux 배포판은 어느 버전을 사용하여 시작한다.  
 각 Linux 배포판에는 시작할 때 사용하는 "WSL" 버전이 설정되어 있으며, 이 설정에 따라 "WSL 1" 또는"WSL 2"를 사용한다.
@@ -121,10 +123,11 @@ wsl --set-version <배포판 이름> <버전>
 wsl --set-version Ubuntu-18.04 2
 ```
   
+WSL2 커널 업데이트를 하라는 에러가 나오면 수동으로 업데이트 한다. 아래 사이트에서 다운로드 프로그램을 실행한다.    
+  https://docs.microsoft.com/ko-kr/windows/wsl/wsl2-kernel  
+      
 머신 성능에 따라서 변경에 시간이 걸릴 수 있다.  
-  
-"Ubuntu 18.04 LTS" 버전을 확인하면 아래와 같이 "VERSION"이 "2"로 되어 있다.  
-  
+    
 <br>    
   
 ## WSL 재시작 하기
@@ -137,16 +140,18 @@ wsl --shutdown
 <br>  
   
 ## X Server를 이용하기 위한 설정(DISPLAY 환경 변수를 자동 설정한다)  
-[출처](https://qiita.com/mhangyo/items/6201ec3e2f8f403c909e  )  
-[(일어)WSL2의 VcXsrv 설정](https://qiita.com/ryoi084/items/0dff11134592d0bb895c) 에서 나온 글을 중심으로 한다.  
 WSL의 디스플레이 설정 공정에서 WSL2 측의 ip 주소를 지정해야 한다.  
 이 글에서는 ipconfig로 확인하여 설정하고 있지만, 글에도 있듯이 다시 시작할 때마다 ip 주소가 달라진다는 문제가 있다.  
 아래와 같은 명령으로 WSL2 측에서 ip 주소를 취득하고, DISPLAY 환경 변수에 넣을 수 있다. 이것을 설정 파일(zshrc 든지)에 적어 놓으면 부팅 시 자동으로 설정하는 것이 가능하다.  
 ```
-export DISPLAY=`grep -oP "(?<=nameserver ).+" /etc/resolv.conf`:0.0
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 ```
-  
-  
+
+[WSL2에서의 VcXsrv 설정](https://docs.google.com/document/d/1CLaBM7zyXq02OVJiS1GoYOy14Kidl_moOewSdoYWzLE/edit?usp=sharing )  
+      
+
+<br>      
+
 ## 네트워크
 WSL1에서는 Windows 10쪽 에뮬레이션을 실시하기 위해, Linux 측에서 TCP/IP 등의 프로토콜은 처리하지 않고, Windows 10의 네트워크 기능을 이용한다. 따라서 Linux의 IP 주소도 Windows 10 쪽과 동일하게 된다.  
 
@@ -156,16 +161,17 @@ WSL1에서는 Windows 10쪽 에뮬레이션을 실시하기 위해, Linux 측에
   
 또한 WSL2 내에서는 "/etc/resolv.conf"에 기재되어 있는 DNS 서버가 항상 Win32 측의 가상 네트워크 측 IP 주소를 나타내게 되어 있다(이 파일은 WSL2 시작 시 자동 생성된다). 이 구조를 이용하여 Linux 측에서도 일정한 단계에서 Win32 측의 IP 주소를 얻는 것이 가능하다.  
     
-
+<br>  
 
 ## WSL2의 git을 Windows 10에서 사용하기
 1. [여기](https://github.com/andy-5/wslgit/releases)에서 다운로드 후 원하는 위치에 둔다.
 2. 일반적인 git으로 사용하고 싶다면 1에서 받은 실행파일의 이름을 git.exe 로 변경한다.
   
+<br>    
   
 ## 글 모음 
 - [WSL2의 Export / Import 기능을 사용한 개발 환경의 공유](https://docs.google.com/document/d/1DG-xaB1IkjYKtwSXsqmS6dL1U0v-7fC20W-5I_Y_egw/edit?usp=sharing)
 - [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 2：도입편](https://tech-lab.sios.jp/archives/18437 )
-- [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 3：실전편】](https://tech-lab.sios.jp/archives/18446 )
+- [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 3：실전편](https://tech-lab.sios.jp/archives/18446 )
 - [How to set up Docker within Windows System for Linux (WSL2) on Windows 10](https://www.hanselman.com/blog/HowToSetUpDockerWithinWindowsSystemForLinuxWSL2OnWindows10.aspx)
   
