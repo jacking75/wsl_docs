@@ -148,10 +148,47 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 ```
 
 [WSL2에서의 VcXsrv 설정](https://docs.google.com/document/d/1CLaBM7zyXq02OVJiS1GoYOy14Kidl_moOewSdoYWzLE/edit?usp=sharing )  
-      
-
+   
 <br>      
-
+  
+## Windows에서 wsl2의 명령어 실행하기
+wsl 명령어에 `-e` 옵션을 붙여서 실행한다.  
+```
+wsl -d '디스트리뷰션 이름' -e '실행할 명령어'
+```   
+아래는 CentOS8에서 cat 명령어를 실행하는 예    
+```
+wsl -d CentOS8 -e cat /etc/os-release
+```  
+  
+     
+## windows와 linux 간의 파일 이동이나 명령어 실행
+  
+### wsl 이 설치되어 있는 디렉토리에 접근하기 
+microsoft store에서 설치하거나 wsl 명령어로 설치한 wsl 용 파일류는 `%userprofile%\AppData\Local\Packages` 라는 숨김 폴더에 설치된다.   
+탐색기에서 위 주소를 입력하면 접근할 수 있다.  
+  
+  
+### linux 에서 windows의 폴더에 접근하기
+linux에서 보이는 windows 시스템 드라이브는 `/mnt/` 아래에 마운트 되어 있다.  
+    
+    
+### linux에서 현재 디렉토리를 windows 탐색기에서 열고 싶다면
+wsl의 linux에서는 windows의 명령어를 실행할 수 있으므로 linux에서 탐색기를 실행할 수 있다.  
+windows 폴더로 현재 있는 디렉토리를 표시할 수 있다.   
+```
+uchi@CP747755-01:/home$ explorer.exe .
+```
+   
+   
+### linux에서 Windows 프로그램 실행하기
+windows에서 path에 지정된 프로그램은 바로 실행하고, 아니면 풀 패스를 지정해서 실행한다.     
+```
+/mnt/c/Windows/System32/mspaint.exe
+``` 
+    
+<br>      
+  
 ## 네트워크
 WSL1에서는 Windows 10쪽 에뮬레이션을 실시하기 위해, Linux 측에서 TCP/IP 등의 프로토콜은 처리하지 않고, Windows 10의 네트워크 기능을 이용한다. 따라서 Linux의 IP 주소도 Windows 10 쪽과 동일하게 된다.  
 
