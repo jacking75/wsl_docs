@@ -206,6 +206,43 @@ WSL1에서는 Windows 10쪽 에뮬레이션을 실시하기 위해, Linux 측에
   
 <br>    
   
+## 디스트리뷰션 import & export
+WSL export 기능으로 환경을 통째로 tar 파일로 출력 할 수 있다.  
+`wsl --export (export 하고 싶은 WSL 환경 이름) (출력 파일 이름)`을 실행하면 된다.  
+```
+PS C:\Users\user01\export_distro> wsl --export Ubuntu-20.04 FocalFossa_copy.tar
+```  
+이것으로 원래 Ubuntu-20.04의 환경이 tar 파일로 출력 되므로, 이제 남은 것은 이것을 다른 환경 이름을 붙여서 import 하면 동일한 환경을 얻을 수 있다.   
+`wsl --import (WSL 아래에 등록할 환경 이름) (export path) (import 환경.tar)` 를 실행하 면된다.  
+```
+PS C:\Users\user01\export_distro> wsl --import FocalFossa_copy ..\wsl_manual_install\ FocalFossa_copy.tar
+```  
+이것으로 지정한 환경 이름에 원본 Ubuntu-20.04와 동일한 환경이 복제 되었다.  
+<pre>
+PS C:\Users\user01> wsl -l --verbose
+  NAME                      STATE           VERSION
+* Ubuntu-20.04              Running         2
+  FocalFossa_copy           Stopped         2
+  docker-desktop            Running         2
+  docker-desktop-data       Running         2
+</pre>  
+  
+터미널에서 `wsl -d (환경 잉름)`을 쳐서 시작해도 좋고, 또는 Windows Terminal의 타이틀 바의 ∨버튼에서 볼 수있는 환경 목록에서 선택해서 시작한다.   
+<pre>
+PS C:\Users\user01> wsl -l --verbose
+  NAME                      STATE           VERSION
+* Ubuntu-20.04              Running         2
+  FocalFossa_copy           Running         2
+  docker-desktop            Running         2
+  docker-desktop-data       Running         2
+</pre>  
+  
+또한 import 시에 지정한 설치한 곳에 환경의 실체인 하드 디스크 이미지 파일 `ext4.vhdx`이 생성 되어 있지만, 내용은 `\\wsl$\` 아래에 마운트 되어 있으므로 이쪽에서 탐색기에서 검색 할 수 있다.   
+  
+필요 없게된 환경을 삭제하고 싶을 때는 `wsl --unregister (등록 이름)` 으로 삭제할 수 있다.  
+    
+<br>    
+  
 ## 글 모음 
 - [WSL2의 Export / Import 기능을 사용한 개발 환경의 공유](https://docs.google.com/document/d/1DG-xaB1IkjYKtwSXsqmS6dL1U0v-7fC20W-5I_Y_egw/edit?usp=sharing)
 - [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 2：도입편](https://tech-lab.sios.jp/archives/18437 )
