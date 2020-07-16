@@ -243,6 +243,43 @@ PS C:\Users\user01> wsl -l --verbose
     
 <br>    
   
+## 수동으로 WSL2 및 리눅스 디스트리뷰션 설치하기
+Windows PowerShell (관리자 권한)를 열고 아래 명령을 실행하여 'WSL"(이 시점에서'WSL 1"이다) 및 "가상 머신 플랫폼"의 기능을 활성화 하고 컴퓨터를 다시 시작한다.  
+```
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+Restart-Computer -Force
+```
+  
+Windows 10 버전 2004의 경우, 제어판의 "Windows 기능의 활성화 및 비활성화"를 열고, "Linux 용 Windows 하위 시스템" 과 "가상 머신 플랫폼"을 활성화한다. Windows 10 Home 에디션 이외의 경우는 "가상 머신 플랫폼" 대신 "Hyper-V"를 활성화 해도 상관 없다. Hyper-V를 사용하려는 경우는 "Hyper-V"쪽을 활성화 하면 좋을 것이다. 또한, Windows Server version 2004의 경우 Hyper-V에서는 WSL 2은 동작하지 않는 것 같다.  
+  
+컴퓨터의 재부팅이 완료되면 Windows PowerShell (관리자 권한)를 다시 열고, 아래 명령을 차례로 실행하여 "Windows Subsystem for Linux Update Setup"을 사용하여 Windows Server, version 2004 또는 Windows 10 버전 2004에 포함된 Linux 커널을 WSL 2 정식판에 대응한 것으로 업데이트하다. 표준에 포함된 것은 WSL2의 개발중인 버전에 대응한 것으로, 정식 버전은 지원하지 않는다. 미래에는 Windows Update를 통해 Linux 커널 업데이트가 제공 될 예정이다.  
+```
+Invoke-WebRequest -uri https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi -outfile .\wsl_update_x64.msi
+.\wsl_update_x64.msi
+Remove-Item -Path .\wsl_update_x64.msi
+```  
+  
+Linux 커널을 업데이트 한 후 명령 프롬프트 또는 PowerShell을 관리자 권한으로 열고 아래 명령을 실행하여 WSL의 기본 버전을 "WSL 1"에서 "WSL 2"로 변경한다.  
+```
+wsl --set-default-version 2
+```  
+    
+Windows Server, version 2004의 경우 아래의 문서에 있는 사용 가능한 Linux 배포판을 다운로드하여 설치한다. Windows 10 버전 2004의 경우 " Microsoft Store"에서 원하는 Linux 배포판을 다운로드 하여 설치한다.  
+[Manually download Windows Subsystem for Linux distro packages](https://docs.microsoft.com/en-us/windows/wsl/install-manual )  
+   
+아래 명령어는 Windows Server version 2004 에 "Ubuntu 18.04"를 설치하는 경우의 예이다. 마지막의 "ubuntu1804.exe"는 처음 실행하면 Ubuntu 18.04 설치를 한다. 이 때 사용자 이름과 암호를 지정한다. 설치가 완료되면 WSL 2 판의 Linux 쉘 환경에 들어간다.  
+```
+invoke-webrequest -uri https://aka.ms/wsl-ubuntu-1804 -outfile ubuntu.zip -UseBasicParsing
+Expand-Archive .\ubuntu.zip .\ubuntu
+Remove-Item -Path .\ubuntu.zip
+.\ubuntu\ubuntu1804.exe 
+```  
+     
+나중에 Linux 쉘 환경을 시작하려면 "bash.exe" 또는 "wsl.exe"(기본 Linux 배포판을 시작한다) 또는 "\ ubuntu \ ubuntu1804.exe"를 입력한다.  
+      
+<br>    
+  
 ## 글 모음 
 - [WSL2의 Export / Import 기능을 사용한 개발 환경의 공유](https://docs.google.com/document/d/1DG-xaB1IkjYKtwSXsqmS6dL1U0v-7fC20W-5I_Y_egw/edit?usp=sharing)
 - [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 2：도입편](https://tech-lab.sios.jp/archives/18437 )
