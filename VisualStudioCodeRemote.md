@@ -32,3 +32,7 @@ Windows 10 version 2004에서 wsl2를 설치하면 vscode를 원격으로 붙어
 
 [(강추)VSCode Remote 사용하기 – SSH 방식](https://bit.ly/36jIIpv  )  
   
+  
+## 글 모음
+[VSCode에서 Remote-WSL 확장 기능 사용하기](https://docs.google.com/document/d/14pXJkN8Q4BVaLAiFN_AJ5SU3ckNXEUjhfSXsLfrrtl8/edit?usp=sharing )
+  
