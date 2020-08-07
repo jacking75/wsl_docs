@@ -284,5 +284,6 @@ Remove-Item -Path .\ubuntu.zip
 - [WSL2의 Export / Import 기능을 사용한 개발 환경의 공유](https://docs.google.com/document/d/1DG-xaB1IkjYKtwSXsqmS6dL1U0v-7fC20W-5I_Y_egw/edit?usp=sharing)
 - [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 2：도입편](https://tech-lab.sios.jp/archives/18437 )
 - [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 3：실전편](https://tech-lab.sios.jp/archives/18446 )
+- [Windows10 + WSL2에 Docker 설치](https://docs.google.com/document/d/1VKF5KTgI97_Ec1vsMo8og6EvNldKAAtd4XR4s1_1b1o/edit?usp=sharing )
 - [How to set up Docker within Windows System for Linux (WSL2) on Windows 10](https://www.hanselman.com/blog/HowToSetUpDockerWithinWindowsSystemForLinuxWSL2OnWindows10.aspx)
   
