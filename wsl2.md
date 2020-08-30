@@ -123,7 +123,7 @@ wsl --set-version <배포판 이름> <버전>
 wsl --set-version Ubuntu-18.04 2
 ```
   
-WSL2 커널 업데이트를 하라는 에러가 나오면 수동으로 업데이트 한다. 아래 사이트에서 다운로드 프로그램을 실행한다.    
+WSL2 커널 업데이트를 하라는 에러(**에러: 0x1bc**)가 나오면 수동으로 업데이트 한다. 아래 사이트에서 다운로드 프로그램을 실행한다.    
   https://docs.microsoft.com/ko-kr/windows/wsl/wsl2-kernel  
       
 머신 성능에 따라서 변경에 시간이 걸릴 수 있다.  
