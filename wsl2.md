@@ -197,7 +197,9 @@ WSL1에서는 Windows 10쪽 에뮬레이션을 실시하기 위해, Linux 측에
 그러나 Windows 10 쪽에서는 항상 WSL2 측은 Localhost로 액세스가 가능한 구조이다. 이것은 WSL2 측에서 수신 포트(Listen 포트)를 Win32 측의 소프트웨어가 중계하는 것으로 이루어진다.  
   
 또한 WSL2 내에서는 "/etc/resolv.conf"에 기재되어 있는 DNS 서버가 항상 Win32 측의 가상 네트워크 측 IP 주소를 나타내게 되어 있다(이 파일은 WSL2 시작 시 자동 생성된다). 이 구조를 이용하여 Linux 측에서도 일정한 단계에서 Win32 측의 IP 주소를 얻는 것이 가능하다.  
-    
+      
+[WSL 2의 네트워크 통신 방법](https://www.sysnet.pe.kr/2/0/12347 ) 
+  	
 <br>  
 
 ## WSL2의 git을 Windows 10에서 사용하기
