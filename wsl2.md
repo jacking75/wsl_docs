@@ -288,6 +288,7 @@ Remove-Item -Path .\ubuntu.zip
 - [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 2：도입편](https://tech-lab.sios.jp/archives/18437 )
 - [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 3：실전편](https://tech-lab.sios.jp/archives/18446 )
 - [Windows10 + WSL2에 Docker 설치](https://docs.google.com/document/d/1VKF5KTgI97_Ec1vsMo8og6EvNldKAAtd4XR4s1_1b1o/edit?usp=sharing )
+- [(일어) 빈약한 Windows PC에서 WSL2 + Docker를 동작시키자](https://qiita.com/y9k8i/items/ed6804de727aa332e8ab )
 - [How to set up Docker within Windows System for Linux (WSL2) on Windows 10](https://www.hanselman.com/blog/HowToSetUpDockerWithinWindowsSystemForLinuxWSL2OnWindows10.aspx)
 - [WSL 2 X11 애플리케이션을 더 깔끔하게 실행하는 방법](https://medium.com/beyond-the-windows-korean-edition/wsl-2-x11-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%84-%EB%8D%94-%EA%B9%94%EB%81%94%ED%95%98%EA%B2%8C-%EC%8B%A4%ED%96%89%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-5a270835801c  )
 - [(일어)WSL2 + Docker Desktop + VSCode（Remote - Containers）로 Go 개발 환경 구축](https://qiita.com/poramal/items/11912b5533ec8e7dbaac ) 
