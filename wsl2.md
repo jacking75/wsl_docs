@@ -65,6 +65,62 @@ wsl --set-default-version 2
 이제 남은 것은 원하는 Linux 배포판을 설치하는 것 뿐이다.  
 Linux 배포판은 「Microsoft Store」에서 설치한다.  
   
+  
+#### 명령어로 Linux 배포판 설치하기
+Microsoft Store가 아닌 명령어로 Linux 배포판을 설치할 수 있다.   
+아래는 PowerShell에서 명령어를 실행한다.  
+  
+1. 배포판 다운로드   
+Ubuntu 20.04를 다운로드 한다  
+```
+Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
+```  
+  
+2. 설치   
+```
+move .\Ubuntu.appx .\Ubuntu.zip
+Expand-Archive .\Ubuntu.zip
+```  
+  
+3. 배포판을 import    
+```
+cd Ubuntu
+wsl.exe --import Ubuntu-20.04 'C:\wsl\Ubuntu-20.04' .\install.tar.gz
+
+# import 되었는지 확인
+wsl -l -v
+```  
+- Ubuntu-20.04: (임의의)배포판 이름
+- 'C:\wsl\Ubuntu-20.04': (임의의)설치할 곳
+  
+  
+4. (optional) 기본 배포판 설정   
+```
+wsl --set-default Ubuntu-20.04
+```    
+만약 이전에 Docker Desktop을 설치한 경우 등에서 기존 배포판을 변경하고 싶은 경우    
+  
+  
+5. 작업 유저 설정  
+이대로 사용하면 root 유저로 사용된다.  작업용 유저를 만들어보자.  
+```
+wsl --distribution Ubuntu-20.04
+sudo adduser takelushi
+usermod -aG sudo takelushi
+```  
+  
+6. 로그인 유저 설정  
+레지스터리 편집기를 연다  
+- regedit.exe  
+
+Ubuntu-20.04의 레지스터리를 찾는다  
+```
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss
+```  
+  
+DefaultUid를 0x3e8(1000) 으로 한다. UID가 1000 이외인 경우 그것에 맞춘다.  
+   
+   
 <br>   
 <br>   
   
