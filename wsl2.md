@@ -337,7 +337,35 @@ Remove-Item -Path .\ubuntu.zip
 나중에 Linux 쉘 환경을 시작하려면 "bash.exe" 또는 "wsl.exe"(기본 Linux 배포판을 시작한다) 또는 "\ ubuntu \ ubuntu1804.exe"를 입력한다.  
       
 <br>    
+     
+## CentOS 7.9 설치하기
+wsl2는 설치 되어 있다고 가정한다.  
   
+GitHub에서 Free 버전을 입수한다.  
+아래에서 CentOS 7.9-2009의 CentOS7.zip를 다운로드한다.  
+https://github.com/mishamosher/CentOS-WSL/releases/tag/7.9-2009  
+  
+CentOS7.zip을 압축해제하고, 아래 폴더에 복사한다.  
+<pre>
+%userprofile%\AppData\Local\Packages
+</pre>  
+  
+Powershell을 실행하고, 위 폴더로 이동한다. 아래 명령어를 실행한다.   
+```
+/CentOS7.exe  
+```  
+  
+인스톨이 끝나면 PowerShell 이나 명령 프롬프트에서 `.\CentOS7.exe`를 실행하면 CentOS가 등록된다.  
+설치 후의 wsl의 OS 확인  
+```
+$ wsl -l -v
+```  
+  
+단축아이콘을 만들면 사용이 편리해진다. 
+`C:\Windows\System32\wsl.exe-d CentOS7`
+    
+<br>     
+   
 ## 글 모음 
 - [WSL2의 Export / Import 기능을 사용한 개발 환경의 공유](https://docs.google.com/document/d/1DG-xaB1IkjYKtwSXsqmS6dL1U0v-7fC20W-5I_Y_egw/edit?usp=sharing)
 - [배포판 복사하기](https://wslhub.com/wsl-firststep/advanced/copy-distro.html)
