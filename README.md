@@ -83,6 +83,8 @@ https://webnautes.tistory.com/1172
         
     
 ### 설정
+- [WSL 인스턴스 export/import 방법 및 단축 아이콘 설정 방법](https://www.sysnet.pe.kr/2/0/12569 )
+- [WSL 인스턴스 초기 설정 명령어](https://www.sysnet.pe.kr/2/0/12573 )
 - [The Windows Subsystem for Linux Guide!](http://wsl-guide.org/en/latest/ )
 - [(일어)WSL에서 apt-get을 사용하여 패키지 설치하기](http://www.atmarkit.co.jp/ait/articles/1608/24/news038.html )
 - [Setting up a Shiny Development Environment within Linux on Windows](https://www.hanselman.com/blog/SettingUpAShinyDevelopmentEnvironmentWithinLinuxOnWindows10.aspx )
