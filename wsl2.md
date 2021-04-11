@@ -377,3 +377,6 @@ $ wsl -l -v
 - [WSL 2 X11 애플리케이션을 더 깔끔하게 실행하는 방법](https://medium.com/beyond-the-windows-korean-edition/wsl-2-x11-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%84-%EB%8D%94-%EA%B9%94%EB%81%94%ED%95%98%EA%B2%8C-%EC%8B%A4%ED%96%89%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-5a270835801c  )
 - [MobaXterm을 이용하여 WSL2에서 GUI 애플리케이션 사용](https://docs.google.com/document/d/17xZhHycz_8f6kMSQxDB_4bTg2a40f9Otq_yE-U9U_m8/edit?usp=sharing )
 - [(일어)WSL2 + Docker Desktop + VSCode（Remote - Containers）로 Go 개발 환경 구축](https://qiita.com/poramal/items/11912b5533ec8e7dbaac ) 
+- [Windows + Docker 환경이 무거운 문제를 unison으로 해결](https://docs.google.com/document/d/14O2_74OOY9RTVbGSACsNTJ6ig3iAlh0Od8qZlJim3qk/edit?usp=sharing )
+- [외부에서 WSL2에 접근하기](https://docs.google.com/document/d/12cX4Zv8mJYnP34VeLhoyPORQCfq0j5qBmsll1YjWPK0/edit?usp=sharing )
+- [(일어) WSL2+ubuntu20.04: GUI로 하는 방법](https://qiita.com/atomyah/items/887a5185ec9a8206c7c4 )
