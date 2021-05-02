@@ -376,6 +376,7 @@ $ wsl -l -v
     - [WSL2의 Export / Import 기능을 사용한 개발 환경의 공유](https://docs.google.com/document/d/1DG-xaB1IkjYKtwSXsqmS6dL1U0v-7fC20W-5I_Y_egw/edit?usp=sharing)
     - [배포판 복사하기](https://wslhub.com/wsl-firststep/advanced/copy-distro.html)
 - 개발
+    - [(일어) WSL2 + Ubuntu 20.04 + Docker 개발 환경 구축](https://qiita.com/amenoyoya/items/ca9210593395dbfc8531 )
     - [(일어) WSL2: 개발 환경 구축 ＆ 툴 개발 가이드](https://zenn.dev/ys/books/6e3f3bc6e3cf741484df)
     - [(일어)WSL2 + Docker Desktop + VSCode（Remote - Containers）로 Go 개발 환경 구축](https://qiita.com/poramal/items/11912b5533ec8e7dbaac ) 
     - [Windows + Docker 환경이 무거운 문제를 unison으로 해결](https://docs.google.com/document/d/14O2_74OOY9RTVbGSACsNTJ6ig3iAlh0Od8qZlJim3qk/edit?usp=sharing )
