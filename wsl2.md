@@ -370,11 +370,14 @@ $ wsl -l -v
 - 설치
 
 - 사용 및 관리
+    - [Windows에서 WSL로 파일 복사 시 root 소유권으로 적용되는 문제](https://www.sysnet.pe.kr/2/0/12718)
     - [(일어) WSL2+ubuntu20.04: GUI로 하는 방법](https://qiita.com/atomyah/items/887a5185ec9a8206c7c4 )
     - [WSL 2 X11 애플리케이션을 더 깔끔하게 실행하는 방법](https://medium.com/beyond-the-windows-korean-edition/wsl-2-x11-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%84-%EB%8D%94-%EA%B9%94%EB%81%94%ED%95%98%EA%B2%8C-%EC%8B%A4%ED%96%89%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-5a270835801c  )
     - [MobaXterm을 이용하여 WSL2에서 GUI 애플리케이션 사용](https://docs.google.com/document/d/17xZhHycz_8f6kMSQxDB_4bTg2a40f9Otq_yE-U9U_m8/edit?usp=sharing )
     - [WSL2의 Export / Import 기능을 사용한 개발 환경의 공유](https://docs.google.com/document/d/1DG-xaB1IkjYKtwSXsqmS6dL1U0v-7fC20W-5I_Y_egw/edit?usp=sharing)
     - [배포판 복사하기](https://wslhub.com/wsl-firststep/advanced/copy-distro.html)
+	- [WSL2 스냇샷 만들기](https://docs.google.com/document/d/180ICeUy3lhdnAu4p3EzOfguLlXAwsOA_mj0KpuKrAms/edit?usp=sharing)
+	- [UBUNTU on WSL2를 초기화(Reset) 하기](https://docs.google.com/document/d/1_gTXcdVXd52IOoYOXYUjHKS35niDckdEptgFvuf014A/edit?usp=sharing)
 - 개발
     - [(일어) WSL2 + Ubuntu 20.04 + Docker 개발 환경 구축](https://qiita.com/amenoyoya/items/ca9210593395dbfc8531 )
     - [(일어) WSL2: 개발 환경 구축 ＆ 툴 개발 가이드](https://zenn.dev/ys/books/6e3f3bc6e3cf741484df)
