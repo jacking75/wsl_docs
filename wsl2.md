@@ -18,15 +18,19 @@ WSL 2의 Linux 파일은 Windows의 파일 시스템(NTFS)가 아닌 EXT4로 포
 Windows 10 2004 버전에서는 WSL2 설치 및 업데이트 프로세스는 매우 쉬운 것이 된다. 기존 Linux 커널은 Windows OS 버전의 일부로 포함 되어 있었지만, 이 다음 릴리스에서는 분리 되기 때문에 타사 드라이버를 설치할 때처럼 Windows Update를 통해 커널을 업데이트 할 수 있다.    
       
   
-[microsoft/WSL2-Linux-Kernel](https://github.com/microsoft/WSL2-Linux-Kernel)  
-[MS Doc Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10 )  
-[WSL2(Windows Subsystem For Linux 2) 사용하기](https://medium.com/@seunghunhan_15321/wsl2-windows-subsystem-for-linux-2-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-a0998b84d5fe  )  
+[microsoft/WSL2-Linux-Kernel](https://github.com/microsoft/WSL2-Linux-Kernel)   
+[MS Doc Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10 )    
+[WSL2(Windows Subsystem For Linux 2) 사용하기](https://medium.com/@seunghunhan_15321/wsl2-windows-subsystem-for-linux-2-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-a0998b84d5fe  )    
+[WSL2 스냅샷 만들기](https://docs.google.com/document/d/180ICeUy3lhdnAu4p3EzOfguLlXAwsOA_mj0KpuKrAms/edit?usp=sharing )  
+
 
   
 <br>  
 
 ## Windows 10에 WSL1 과 WSL2 설치하기
+- [커맨드라인으로 WSL 2 설치하기](https://wslhub.com/wsl-firststep/firststep/install/  )
     
+  
 ### 1.PowerShell 시작
 "PowerShell"을 관리자 권한으로 실행한다.    
   
