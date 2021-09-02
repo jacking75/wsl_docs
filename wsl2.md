@@ -22,6 +22,7 @@ Windows 10 2004 버전에서는 WSL2 설치 및 업데이트 프로세스는 매
 [MS Doc Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/ko-kr/windows/wsl/install-win10 )    
 [WSL2(Windows Subsystem For Linux 2) 사용하기](https://medium.com/@seunghunhan_15321/wsl2-windows-subsystem-for-linux-2-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-a0998b84d5fe  )    
 [WSL2 스냅샷 만들기](https://docs.google.com/document/d/180ICeUy3lhdnAu4p3EzOfguLlXAwsOA_mj0KpuKrAms/edit?usp=sharing )  
+[docker-desktop-data, docker-desktop (%LOCALAPPDATA%\Docker\wsl\data\ext4.vhdx) 파일을 다른 디렉터리로 옮기는 방법](https://www.sysnet.pe.kr/2/0/12815 )  
 
 
   
