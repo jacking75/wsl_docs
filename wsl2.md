@@ -383,6 +383,7 @@ $ wsl -l -v
     - [배포판 복사하기](https://wslhub.com/wsl-firststep/advanced/copy-distro.html)
 	- [WSL2 스냇샷 만들기](https://docs.google.com/document/d/180ICeUy3lhdnAu4p3EzOfguLlXAwsOA_mj0KpuKrAms/edit?usp=sharing)
 	- [UBUNTU on WSL2를 초기화(Reset) 하기](https://docs.google.com/document/d/1_gTXcdVXd52IOoYOXYUjHKS35niDckdEptgFvuf014A/edit?usp=sharing)
+	- [(일어) WSL2에서 시각이 느려지는 문제를 해결](https://qiita.com/nakahara-d/items/2b7bab82025fbdb23672)
 - 개발
     - [(일어) WSL2 + Ubuntu 20.04 + Docker 개발 환경 구축](https://qiita.com/amenoyoya/items/ca9210593395dbfc8531 )
     - [(일어) WSL2: 개발 환경 구축 ＆ 툴 개발 가이드](https://zenn.dev/ys/books/6e3f3bc6e3cf741484df)
