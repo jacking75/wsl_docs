@@ -393,6 +393,7 @@ $ wsl -l -v
     - [How to set up Docker within Windows System for Linux (WSL2) on Windows 10](https://www.hanselman.com/blog/HowToSetUpDockerWithinWi
     - [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 2：도입편](https://tech-lab.sios.jp/archives/18437 )
     - [(일어)WSL2에서 극적으로 변화는 Web 애플리케이션 개발 환경 - 3：실전편](https://tech-lab.sios.jp/archives/18446 )
+	- [Ubuntu(WSL2)에 PHP8 설치](https://docs.google.com/document/d/1dtcJT9Q1hMK32b_iRagZuNJG7-UyP5K9_nMybVAG5XU/edit?usp=sharing )
 ndowsSystemForLinuxWSL2OnWindows10.aspx)
 - 네트워크
     - [외부에서 WSL2에 접근하기](https://docs.google.com/document/d/12cX4Zv8mJYnP34VeLhoyPORQCfq0j5qBmsll1YjWPK0/edit?usp=sharing )
