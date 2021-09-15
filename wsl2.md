@@ -375,6 +375,7 @@ $ wsl -l -v
 - 설치
 
 - 사용 및 관리
+    - [Windows 앱에서 WSL2의 파일을 읽고 쓰기](https://docs.google.com/document/d/1gopoEuGlJpN_e5M_zrgOxq8_vTgANItGHWzx16_rdQU/edit?usp=sharing )
     - [Windows에서 WSL로 파일 복사 시 root 소유권으로 적용되는 문제](https://www.sysnet.pe.kr/2/0/12718)
     - [(일어) WSL2+ubuntu20.04: GUI로 하는 방법](https://qiita.com/atomyah/items/887a5185ec9a8206c7c4 )
     - [WSL 2 X11 애플리케이션을 더 깔끔하게 실행하는 방법](https://medium.com/beyond-the-windows-korean-edition/wsl-2-x11-%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98%EC%9D%84-%EB%8D%94-%EA%B9%94%EB%81%94%ED%95%98%EA%B2%8C-%EC%8B%A4%ED%96%89%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-5a270835801c  )
