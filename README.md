@@ -46,6 +46,7 @@ https://webnautes.tistory.com/1172
   
   
 ## Tool
+- [WSL GUI tool](https://github.com/emeric-martineau/wsl-gui-tool ) GUI로 WLS을 관리하는 툴
 - [WSL-DistroManager](https://github.com/rkttu/WSL-DistroManager )
     - Highly customizable WSL distro manager for Windows 10 and Windows Server 19H1+
     - 동일 머신에 동일 Linux 버전을 복수 설치할 수 있음.
