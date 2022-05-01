@@ -374,6 +374,7 @@ $ wsl -l -v
 ## 글 모음 
 - 설치
     - [(일어) WSL2에서 Ubuntu 데스크탑 환경 설치하기](https://qiita.com/TS0321/items/5124222525dba43956c7 )
+    - [(일어) Windows에「Ubuntu 22.04 LTS」를 설치하는 방법](https://news.mynavi.jp/techplus/article/20220430-2330411 ) 
 - 사용 및 관리
     - [Windows 앱에서 WSL2의 파일을 읽고 쓰기](https://docs.google.com/document/d/1gopoEuGlJpN_e5M_zrgOxq8_vTgANItGHWzx16_rdQU/edit?usp=sharing )
     - [Windows에서 WSL로 파일 복사 시 root 소유권으로 적용되는 문제](https://www.sysnet.pe.kr/2/0/12718)
